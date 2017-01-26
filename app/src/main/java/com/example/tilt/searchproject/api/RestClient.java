@@ -17,7 +17,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 
 @Rest(rootUrl = "https://api.airbnb.com/v2", converters = { MappingJackson2HttpMessageConverter.class })
 public interface RestClient extends RestClientHeaders, RestClientRootUrl, RestClientSupport {
-
+    // Missing the auth key. sorry it wont work without it. 
     @Get("/search_results?location={location}&checkin={checkin}&checkout={checkout}&key=&_format=for_search_results_with_minimal_pricing")
     SearchResults getSearchResults(@Path String location, @Path String checkin, @Path String checkout);
 
